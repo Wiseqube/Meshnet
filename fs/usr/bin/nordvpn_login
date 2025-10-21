@@ -13,7 +13,7 @@ nordvpn logout --persist-token > /dev/null
 
 if [[ -n ${NORDVPN_TOKEN} ]]; then
   # Do not consent to data collection..
-  echo "n" | nordvpn login --token "${TOKEN}" || {
+  echo "n" | nordvpn login --token "${NORDVPN_TOKEN}" || {
     echo "Invalid token."
     exit 1
   }
